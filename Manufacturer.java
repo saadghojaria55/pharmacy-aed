@@ -5,6 +5,7 @@
  */
 package Business.Manufacturer;
 
+import Business.Items.Item;
 import Business.ManuReq.ManuRequests;
 import java.util.ArrayList;
 
@@ -17,13 +18,25 @@ public class Manufacturer {
     private String emailAddress;
     private String ManuId;
     private ArrayList<ManuRequests> Manureq;
+    private ArrayList<Item> itemDirectory;
 
-        public Manufacturer(){
+    public ArrayList<Item> getItemDirectory() {
+        return itemDirectory;
+    }
+
+    public void setItemDirectory(ArrayList<Item> itemDirectory) {
+        this.itemDirectory = itemDirectory;
+    }
+        
+    
+    
+    public Manufacturer(){
         Manureq =new ArrayList<ManuRequests>();
+        itemDirectory=new ArrayList<Item>();
     }
     
     
-    ItemDirectory itemDirectory;
+   
     private String userName;
     String PhoneNumber;
     private String Password;
@@ -85,24 +98,17 @@ public class Manufacturer {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
-
-   
-
-    public ItemDirectory getItemDirectory() {
-        return itemDirectory;
-    }
-
-    public void setItemDirectory(ItemDirectory itemDirectory) {
-        this.itemDirectory = itemDirectory;
-    }
-    
-   
-    
-    
     @Override
     public String toString()
     {
         return this.ManuName;
+    }
+   
+    public Item addNewItem(Item item)
+    { 
+        itemDirectory.add(item);
+        return item;
+        
     }
     
 }
