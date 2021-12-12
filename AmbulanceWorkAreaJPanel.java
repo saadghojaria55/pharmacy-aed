@@ -50,25 +50,38 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        historyRideBtn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        systemAdminPanel = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         rideRequestBtn = new javax.swing.JButton();
         ambulanceinfoBtn = new javax.swing.JButton();
         logOutBtn = new javax.swing.JButton();
+        rightSystemAdminPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(138, 194, 211));
         setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Welcome To WeCare");
+        jPanel2.setPreferredSize(new java.awt.Dimension(1800, 900));
 
-        historyRideBtn.setText("History");
-        historyRideBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                historyRideBtnActionPerformed(evt);
-            }
-        });
+        systemAdminPanel.setBackground(new java.awt.Color(215, 81, 81));
+        systemAdminPanel.setMinimumSize(new java.awt.Dimension(1338, 840));
+
+        javax.swing.GroupLayout systemAdminPanelLayout = new javax.swing.GroupLayout(systemAdminPanel);
+        systemAdminPanel.setLayout(systemAdminPanelLayout);
+        systemAdminPanelLayout.setHorizontalGroup(
+            systemAdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1780, Short.MAX_VALUE)
+        );
+        systemAdminPanelLayout.setVerticalGroup(
+            systemAdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 2424, Short.MAX_VALUE)
+        );
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel3.setMinimumSize(new java.awt.Dimension(280, 840));
+        jPanel3.setPreferredSize(new java.awt.Dimension(280, 840));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rideRequestBtn.setText("Ride Requests");
         rideRequestBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -76,6 +89,7 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
                 rideRequestBtnActionPerformed(evt);
             }
         });
+        jPanel3.add(rideRequestBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
         ambulanceinfoBtn.setText("Ambulance Information");
         ambulanceinfoBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +97,7 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
                 ambulanceinfoBtnActionPerformed(evt);
             }
         });
+        jPanel3.add(ambulanceinfoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         logOutBtn.setBackground(new java.awt.Color(204, 204, 204));
         logOutBtn.setText("Logout");
@@ -91,69 +106,82 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
                 logOutBtnActionPerformed(evt);
             }
         });
+        jPanel3.add(logOutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+
+        rightSystemAdminPanel.setBackground(new java.awt.Color(255, 255, 255));
+        rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(1058, 840));
+        rightSystemAdminPanel.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/BKG3_1.jpg"))); // NOI18N
+        rightSystemAdminPanel.add(jLabel1, "card2");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(211, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(systemAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(systemAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(347, 347, 347)
-                        .addComponent(logOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(324, 324, 324)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rideRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(historyRideBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ambulanceinfoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(342, Short.MAX_VALUE))
+            .addGap(0, 1800, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(historyRideBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(rideRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(ambulanceinfoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
-                .addComponent(logOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(94, 94, 94))
+            .addGap(0, 900, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void rideRequestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rideRequestBtnActionPerformed
         // TODO add your handling code here:
 
-        RideRequestJPanel rideRequestJPanel = new RideRequestJPanel(CardLayoutJPanel,business,account, ambulance);
-        CardLayoutJPanel.add("RideRequestJPanel", rideRequestJPanel);
-        CardLayout layout = (CardLayout) CardLayoutJPanel.getLayout();
-        layout.next(CardLayoutJPanel);
+        RideRequestJPanel rideRequestJPanel = new RideRequestJPanel(rightSystemAdminPanel,business,account, ambulance);
+        rightSystemAdminPanel.add("RideRequestJPanel", rideRequestJPanel);
+        CardLayout layout = (CardLayout) rightSystemAdminPanel.getLayout();
+        layout.next(rightSystemAdminPanel);
     }//GEN-LAST:event_rideRequestBtnActionPerformed
 
     private void ambulanceinfoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ambulanceinfoBtnActionPerformed
         // TODO add your handling code here:
-        AmbulanceInfoJPanel ambulanceInfoJpanel = new AmbulanceInfoJPanel(CardLayoutJPanel, this.ambulance);
-        CardLayoutJPanel.add("AmbulanceInfoJpanel", ambulanceInfoJpanel);
-        CardLayout layout = (CardLayout) CardLayoutJPanel.getLayout();
-        layout.next(CardLayoutJPanel);
+        AmbulanceInfoJPanel ambulanceInfoJpanel = new AmbulanceInfoJPanel(rightSystemAdminPanel, this.ambulance);
+        rightSystemAdminPanel.add("AmbulanceInfoJpanel", ambulanceInfoJpanel);
+        CardLayout layout = (CardLayout) rightSystemAdminPanel.getLayout();
+        layout.next(rightSystemAdminPanel);
     }//GEN-LAST:event_ambulanceinfoBtnActionPerformed
-
-    private void historyRideBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historyRideBtnActionPerformed
-        PreviousRideJPanel pastRideJPanel = new PreviousRideJPanel(CardLayoutJPanel, business,account,this.ambulance);
-        CardLayoutJPanel.add("AmbulanceInfoJpanel", pastRideJPanel);
-        CardLayout layout = (CardLayout) CardLayoutJPanel.getLayout();
-        layout.next(CardLayoutJPanel);
-        
-        
-    }//GEN-LAST:event_historyRideBtnActionPerformed
 
     private void logOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutBtnActionPerformed
         // TODO add your handling code here:
@@ -167,9 +195,12 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ambulanceinfoBtn;
-    private javax.swing.JButton historyRideBtn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JButton logOutBtn;
     private javax.swing.JButton rideRequestBtn;
+    private javax.swing.JPanel rightSystemAdminPanel;
+    private javax.swing.JPanel systemAdminPanel;
     // End of variables declaration//GEN-END:variables
 }

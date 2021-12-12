@@ -28,7 +28,7 @@ public class AmbulanceInfoJPanel extends javax.swing.JPanel {
         this.ambulance= viewAmbulance;
         
         idTxt.setText(ambulance.getAmbulanceId());
-        //emailTxt.setText(ambulance.getEmailId());
+        
         numberTxt.setText(ambulance.getPhoneNo());
         drivernameTxt.setText(ambulance.getDriverName());
         baseLocationTxt.setText(ambulance.getBaseLocation());
@@ -162,16 +162,12 @@ public class AmbulanceInfoJPanel extends javax.swing.JPanel {
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         // TODO add your handling code here:
 
-        
-
         String phoneNo= numberTxt.getText();
         String baseLocation = baseLocationTxt.getText();
         String driverName = drivernameTxt.getText();
         String licenseNo= licenseTxt.getText();
         
-        
         ambulance.setBaseLocation(baseLocationTxt.getText());
-       // ambulance.setAmbulanceId(idTxt.getText());
         ambulance.setLicenseNo(licenseTxt.getText());
         ambulance.setDriverName(drivernameTxt.getText());
         ambulance.setPhoneNo(numberTxt.getText());
@@ -181,9 +177,7 @@ public class AmbulanceInfoJPanel extends javax.swing.JPanel {
         this.idTxt.setEnabled(false);
         this.drivernameTxt.setEnabled(false);
         this.numberTxt.setEnabled(false);
-
         this.saveBtn.setEnabled(false);
-
         this.UpdateBtn.setEnabled(true);
 
        
@@ -194,12 +188,9 @@ public class AmbulanceInfoJPanel extends javax.swing.JPanel {
         
         this.baseLocationTxt.setEnabled(true);
         this.licenseTxt.setEnabled(true);
-        //this.idTxt.setEnabled(false);
         this.drivernameTxt.setEnabled(true);
         this.numberTxt.setEnabled(true);
-        
         this.saveBtn.setEnabled(true);
-
         this.UpdateBtn.setEnabled(false);
         
     }//GEN-LAST:event_UpdateBtnActionPerformed

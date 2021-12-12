@@ -7,8 +7,14 @@ package UserInterface.Ambulance;
 
 import Business.Ambulance.Ambulance;
 import Business.Ecosystem;
+import Business.Patient.Patient;
+import Business.SOSRequest.SOSRequests;
 import Business.UserAccount.UserAccount;
+import UserInterface.SystemAdmin.SystemAdminAmbulanceJPanel;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -23,12 +29,41 @@ public class RideRequestJPanel extends javax.swing.JPanel {
     Ecosystem business;
     Ambulance ambulance;
     UserAccount account;
+    Patient patient;
     public RideRequestJPanel(JPanel CardLayoutJPanel,Ecosystem business,UserAccount account,Ambulance ambulance) {
         initComponents();
         this.CardLayoutJPanel = CardLayoutJPanel;
         this.business = business;
         this.account = account;
         this.ambulance = (Ambulance) account.getDetails();
+        this.populateSOSTable();
+    }
+    public void populateSOSTable(){
+         DefaultTableModel tablemodel = (DefaultTableModel) sosreq.getModel();
+        
+        tablemodel.setRowCount(0);
+        
+       
+        for (Ambulance ambu: business.getAmbulancefleet().getAmbulanceFleet()) {
+           
+            if (ambu.getUsername().equals(account.getUsername())) {
+                //System.out.println(restro.getOrderList());
+               for(SOSRequests req: ambu.getSosreq()){
+                Object[] row = new Object[8];
+                row[0] = req.getRequestId();
+                row[1] = req.getAmbulanceId();
+                row[2] = req.getAmbuBaseLocation();
+                row[3] = req.getAmbulancePhoneNo();
+                row[4] = req.getPatientName();
+                row[5] = req.getPatientAddr();
+                row[6] = req.getPatientPhone();
+                row[7] = req.getReqStatus();
+                tablemodel.addRow(row); 
+               }
+                
+            }
+            
+        }
     }
 
    
@@ -42,21 +77,100 @@ public class RideRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(138, 194, 211));
+        jScrollPane1 = new javax.swing.JScrollPane();
+        sosreq = new javax.swing.JTable();
+        UpdateStatus = new javax.swing.JButton();
+        RefreshBtn = new javax.swing.JButton();
+        BackBtn = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 883, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
-        );
+        setBackground(new java.awt.Color(138, 194, 211));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        sosreq.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "REQUEST ID", "AMBULANCE ID", "AMBU LOCATION", "AMBU CONTACT", "PATIENT NAME", "PATIENT ADDR", "PATIENT CONTACT", "STATUS"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(sosreq);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 650, 240));
+
+        UpdateStatus.setText("UPDATE STATUS");
+        UpdateStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdateStatusActionPerformed(evt);
+            }
+        });
+        add(UpdateStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 163, 51));
+
+        RefreshBtn.setText("Refresh");
+        RefreshBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RefreshBtnActionPerformed(evt);
+            }
+        });
+        add(RefreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 100, -1));
+
+        BackBtn.setText("<Back");
+        BackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackBtnActionPerformed(evt);
+            }
+        });
+        add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void UpdateStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateStatusActionPerformed
+       int row = sosreq.getSelectedRow();
+        if(row<0) {
+            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        else{
+          
+           String reqId;
+           reqId= (String) sosreq.getValueAt(row, 0);
+                
+                 UpdateStatusJPanel updateStatusJPanel =new UpdateStatusJPanel(CardLayoutJPanel,business,account,patient ,reqId, ambulance);
+                 CardLayoutJPanel.add("UpdateStatusPanel",updateStatusJPanel);
+                 CardLayout layout=(CardLayout)CardLayoutJPanel.getLayout();
+                 layout.next(CardLayoutJPanel);
+        }
+    }//GEN-LAST:event_UpdateStatusActionPerformed
+
+    private void RefreshBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshBtnActionPerformed
+       populateSOSTable();
+    }//GEN-LAST:event_RefreshBtnActionPerformed
+
+    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
+        // TODO add your handling code here:
+        AmbulanceWorkAreaJPanel updateStatusJPanel =new AmbulanceWorkAreaJPanel(CardLayoutJPanel,account,business);
+        CardLayoutJPanel.add("UpdateStatusPanel",updateStatusJPanel);
+        CardLayout layout=(CardLayout)CardLayoutJPanel.getLayout();
+        layout.next(CardLayoutJPanel);
+               
+    }//GEN-LAST:event_BackBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackBtn;
+    private javax.swing.JButton RefreshBtn;
+    private javax.swing.JButton UpdateStatus;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable sosreq;
     // End of variables declaration//GEN-END:variables
 }
