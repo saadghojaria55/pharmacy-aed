@@ -36,11 +36,6 @@ public class PatientInfoJPanel extends javax.swing.JPanel {
         this.bloodGroupTxt.setText(patient.getBloodGroup());
         this.genderComboBox.setSelectedItem(patient.getGender());
         this.emailTxt.setText(patient.getEmailId());
-        
-        
-        
-      
-        
        this.addressTxt.setEnabled(false);
        this.emailTxt.setEnabled(false);
        this.idTxt.setEnabled(false);
@@ -182,7 +177,6 @@ public class PatientInfoJPanel extends javax.swing.JPanel {
 
     private void UpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateBtnActionPerformed
         // TODO add your handling code here:
-        
        this.addressTxt.setEnabled(true);
        this.emailTxt.setEnabled(true);
        this.nameTxt.setEnabled(true);
@@ -190,9 +184,7 @@ public class PatientInfoJPanel extends javax.swing.JPanel {
        this.ageTxt.setEnabled(true);
        this.bloodGroupTxt.setEnabled(true);
        this.genderComboBox.setEnabled(true);
-       
        this.saveBtn.setEnabled(true);
-       
        this.UpdateBtn.setEnabled(false);
     }//GEN-LAST:event_UpdateBtnActionPerformed
 
