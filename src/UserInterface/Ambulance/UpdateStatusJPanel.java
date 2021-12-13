@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shrutikasalian
+ * @author Saad Ghojaria
  */
 public class UpdateStatusJPanel extends javax.swing.JPanel {
 
@@ -111,6 +111,7 @@ public class UpdateStatusJPanel extends javax.swing.JPanel {
                    if(req.getRequestId().equals(reqId)){
                         req.setReqStatus(ReqStatus.getText());
                         JOptionPane.showMessageDialog(null, "AMBULANCE STATUS UPDATED!");
+                        ambu.setReqStatus(ReqStatus.getText());
                  }
                }
                 

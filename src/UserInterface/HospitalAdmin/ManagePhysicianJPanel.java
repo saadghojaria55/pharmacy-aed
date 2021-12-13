@@ -10,7 +10,8 @@ import Business.Department.Department;
 import Business.Doctor.Doctor;
 import Business.Ecosystem;
 import Business.Hospital.Hospital;
-import UserInterface.Physician.CreatePhysicianJPanel;
+import Business.UserAccount.UserAccount;
+import UserInterface.HospitalAdmin.CreatePhysicianJPanel;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -19,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author srushtidesai
  */
 public class ManagePhysicianJPanel extends javax.swing.JPanel {
 
@@ -30,12 +31,12 @@ public class ManagePhysicianJPanel extends javax.swing.JPanel {
     private Hospital hospital;
     private Department department;
     private Ecosystem business;
-    
+    UserAccount account;
     public ManagePhysicianJPanel() {
         initComponents();
     }
 
-    public ManagePhysicianJPanel(JPanel CardLayoutJPanel, Hospital hospital, Department department, Ecosystem business) {
+    public ManagePhysicianJPanel(JPanel CardLayoutJPanel, Hospital hospital, Department department, Ecosystem business,UserAccount account) {
 
         initComponents();
         this.CardLayoutJPanel = CardLayoutJPanel;
@@ -65,20 +66,22 @@ public class ManagePhysicianJPanel extends javax.swing.JPanel {
         viewPhysicianBtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backBtn.setText("<back");
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        backBtn.setText("< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 90, 40));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 120, 30));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        jLabel1.setText("Manage Doctors");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("MANAGE DOCTORS");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 380, -1));
 
         physicianTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -93,39 +96,43 @@ public class ManagePhysicianJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(physicianTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 710, 131));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 710, 131));
 
-        createPhysiciansBtn.setText("Add New Physician");
+        createPhysiciansBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        createPhysiciansBtn.setText("Add ");
         createPhysiciansBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createPhysiciansBtnActionPerformed(evt);
             }
         });
-        add(createPhysiciansBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 160, -1));
+        add(createPhysiciansBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 210, 40));
 
-        deleteBtn.setText("Remove Physician");
+        deleteBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteBtnActionPerformed(evt);
             }
         });
-        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 160, -1));
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 210, 40));
 
-        viewPhysicianBtn.setText("View Details");
+        viewPhysicianBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        viewPhysicianBtn.setText("View ");
         viewPhysicianBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewPhysicianBtnActionPerformed(evt);
             }
         });
-        add(viewPhysicianBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 160, -1));
+        add(viewPhysicianBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, 210, 40));
 
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton1.setText("Refresh");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 160, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 319, 210, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -137,7 +144,7 @@ public class ManagePhysicianJPanel extends javax.swing.JPanel {
 
     private void createPhysiciansBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createPhysiciansBtnActionPerformed
         // TODO add your handling code here:
-        CreatePhysicianJPanel createPhysicianJPanel = new CreatePhysicianJPanel(CardLayoutJPanel, business);
+        CreatePhysicianJPanel createPhysicianJPanel = new CreatePhysicianJPanel(CardLayoutJPanel, business,hospital);
         CardLayoutJPanel.add("createPhysicianJPanel", createPhysicianJPanel);
         CardLayout layout = (CardLayout) CardLayoutJPanel.getLayout();
         layout.next(CardLayoutJPanel);

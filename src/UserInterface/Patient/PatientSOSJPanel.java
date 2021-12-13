@@ -56,12 +56,14 @@ public class PatientSOSJPanel extends javax.swing.JPanel {
         }
         
         for(Ambulance sos : sosList) {
-            Object row[] = new Object[5];
+            Object row[] = new Object[6];
             row[0] = sos.getAmbulanceId();
             row[1] = sos.getDriverName();
             row[2] = sos.getPhoneNo();
             row[3] = sos.getBaseLocation();
             row[4] = sos.getLicenseNo();
+            row[5] = sos.getReqStatus();
+            
             model.addRow(row);
         }
     }
@@ -84,10 +86,12 @@ public class PatientSOSJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(138, 194, 211));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("REQUEST FOR SOS");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 86, -1, -1));
 
         backBtn.setText("<back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -95,19 +99,22 @@ public class PatientSOSJPanel extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 592, -1, -1));
 
         sosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Ambulance Id", "Driver Name", "Contact Number", "Base Location", "License Number"
+                "Ambulance Id", "Driver Name", "Contact Number", "Base Location", "License Number", "Status"
             }
         ));
         jScrollPane1.setViewportView(sosTable);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 133, 640, 260));
 
         refreshBtn.setText("Refresh");
         refreshBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -115,6 +122,7 @@ public class PatientSOSJPanel extends javax.swing.JPanel {
                 refreshBtnActionPerformed(evt);
             }
         });
+        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(647, 92, -1, -1));
 
         BookSOSbtn.setText("SEND REQUEST FOR AMBULANCE");
         BookSOSbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -122,56 +130,8 @@ public class PatientSOSJPanel extends javax.swing.JPanel {
                 BookSOSbtnActionPerformed(evt);
             }
         });
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/shrutikasalian/Desktop/ambulance1.jpeg")); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(refreshBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 105, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(90, 90, 90))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BookSOSbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(273, 273, 273))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(backBtn)
-                    .addGap(0, 743, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(refreshBtn))
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(BookSOSbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 592, Short.MAX_VALUE)
-                    .addComponent(backBtn)
-                    .addGap(0, 44, Short.MAX_VALUE)))
-        );
+        add(BookSOSbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(292, 411, 263, 62));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 121, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

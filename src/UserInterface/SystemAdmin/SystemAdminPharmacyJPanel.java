@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author Saad Ghojaria
  */
 public class SystemAdminPharmacyJPanel extends javax.swing.JPanel {
 
@@ -78,25 +78,25 @@ public class SystemAdminPharmacyJPanel extends javax.swing.JPanel {
         createPharmacyBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
         refreshBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         viewPharmacyBtn.setBackground(new java.awt.Color(255, 255, 255));
-        viewPharmacyBtn.setText("View Details");
+        viewPharmacyBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        viewPharmacyBtn.setText("View ");
         viewPharmacyBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewPharmacyBtnActionPerformed(evt);
             }
         });
-        add(viewPharmacyBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 200, 30));
+        add(viewPharmacyBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 530, 200, 40));
 
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Pharmacy Portal");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, -1, -1));
+        jLabel1.setText("PHARMACY PORTAL");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
 
         pharmacyTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,25 +111,27 @@ public class SystemAdminPharmacyJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(pharmacyTbl);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 770, 90));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 770, 220));
 
         deleteBtn.setBackground(new java.awt.Color(255, 255, 255));
-        deleteBtn.setText("Delete Existing Pharmacy");
+        deleteBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        deleteBtn.setText("Delete ");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteBtnActionPerformed(evt);
             }
         });
-        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, 200, 30));
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 200, 40));
 
         createPharmacyBtn.setBackground(new java.awt.Color(255, 255, 255));
-        createPharmacyBtn.setText("Sign Up New Pharmacy");
+        createPharmacyBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        createPharmacyBtn.setText("Add");
         createPharmacyBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createPharmacyBtnActionPerformed(evt);
             }
         });
-        add(createPharmacyBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 200, 30));
+        add(createPharmacyBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 200, 40));
 
         backBtn.setBackground(new java.awt.Color(255, 255, 255));
         backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/icons8-back-arrow-24.png"))); // NOI18N
@@ -138,18 +140,19 @@ public class SystemAdminPharmacyJPanel extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 187, 40, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 30, 30));
 
+        refreshBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         refreshBtn.setText("Refresh");
         refreshBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshBtnActionPerformed(evt);
             }
         });
-        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, 200, 30));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, 70, 50));
+        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 200, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/HBKG_2.jpg"))); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(138, 194, 211));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/cover1.jpeg"))); // NOI18N
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1010, 680));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -209,7 +212,6 @@ public class SystemAdminPharmacyJPanel extends javax.swing.JPanel {
     private javax.swing.JButton createPharmacyBtn;
     private javax.swing.JButton deleteBtn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable pharmacyTbl;

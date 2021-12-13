@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author Saad Ghojaria
  */
 public class TestNewJpanel extends javax.swing.JPanel {
     
@@ -60,39 +60,44 @@ public class TestNewJpanel extends javax.swing.JPanel {
         choosebtn = new javax.swing.JButton();
         completeTRbtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         backBtn.setText("< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 23, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel4.setText("Upload Test Result");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 38, -1, 58));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("UPLOAD TEST RESULT");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, 58));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Upload Result: ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 156, 116, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 116, 30));
 
+        choosebtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         choosebtn.setText("Choose");
         choosebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 choosebtnActionPerformed(evt);
             }
         });
-        add(choosebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 158, -1, -1));
+        add(choosebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
+        completeTRbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         completeTRbtn.setText("Complete Test Request");
         completeTRbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 completeTRbtnActionPerformed(evt);
             }
         });
-        add(completeTRbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 237, -1, 38));
+        add(completeTRbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, 38));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

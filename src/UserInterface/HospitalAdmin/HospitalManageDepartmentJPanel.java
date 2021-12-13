@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Jatin Bali
+ * @author shrutikasalian
  */
 public class HospitalManageDepartmentJPanel extends javax.swing.JPanel {
 
@@ -82,20 +82,20 @@ public class HospitalManageDepartmentJPanel extends javax.swing.JPanel {
         departmentTable = new javax.swing.JTable();
         Viewbtn = new javax.swing.JButton();
         addBtn = new javax.swing.JButton();
-        Deletebtn = new javax.swing.JButton();
         refreshbtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setText("< back");
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        btnBack.setText("< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 100, 30));
 
         departmentTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -107,43 +107,39 @@ public class HospitalManageDepartmentJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(departmentTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 110, 700, 156));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 710, 156));
 
-        Viewbtn.setText("View Details");
+        Viewbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        Viewbtn.setText("View");
         Viewbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ViewbtnActionPerformed(evt);
             }
         });
-        add(Viewbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 201, -1));
+        add(Viewbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 210, 40));
 
-        addBtn.setText("Sign Up New Department");
+        addBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        addBtn.setText("Add");
         addBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtnActionPerformed(evt);
             }
         });
-        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
+        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 210, 40));
 
-        Deletebtn.setText("Delete Existing Department");
-        Deletebtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DeletebtnActionPerformed(evt);
-            }
-        });
-        add(Deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 201, -1));
-
+        refreshbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         refreshbtn.setText("Refresh");
         refreshbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshbtnActionPerformed(evt);
             }
         });
-        add(refreshbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 201, 30));
+        add(refreshbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 210, 40));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel1.setText("Manage Department");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, -1, -1));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("MANAGE DEPARTMENT");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 440, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -181,23 +177,6 @@ public class HospitalManageDepartmentJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_ViewbtnActionPerformed
 
-    private void DeletebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeletebtnActionPerformed
-        // TODO add your handling code here:
-        int row = departmentTable.getSelectedRow();
-        Department selected = (Department) departmentTable.getValueAt(row, 0);
-
-        if(row<0) {
-            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-        
-        hospital.deleteDepartment(selected.getDepartmentId(), business);
-
-        populateTable();
-        
-        
-    }//GEN-LAST:event_DeletebtnActionPerformed
-
     private void refreshbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshbtnActionPerformed
         // TODO add your handling code here:
         
@@ -208,7 +187,6 @@ public class HospitalManageDepartmentJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Deletebtn;
     private javax.swing.JButton Viewbtn;
     private javax.swing.JButton addBtn;
     private javax.swing.JButton btnBack;

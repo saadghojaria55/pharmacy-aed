@@ -21,7 +21,7 @@ public class Ambulance {
     private String phoneNo;
     private String licenseNo;
     private String baseLocation;
-    //private String ReqStatus;
+    private String ReqStatus;
     private ArrayList<SOSRequests> Sosreq;
 
     public ArrayList<SOSRequests> getSosreq() {
@@ -35,13 +35,13 @@ public class Ambulance {
         Sosreq =new ArrayList<SOSRequests>();
     }
 
-    /*public String getReqStatus() {
+    public String getReqStatus() {
         return ReqStatus;
     }
 
     public void setReqStatus(String ReqStatus) {
         this.ReqStatus = ReqStatus;
-    }*/
+    }
    
 
     public String getUsername() {

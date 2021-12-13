@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author shrutikasalian
  */
 public class LabSideNavWorkAreaJpanel extends javax.swing.JPanel {
 
@@ -63,7 +63,6 @@ public class LabSideNavWorkAreaJpanel extends javax.swing.JPanel {
         systemAdminPanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        requestBtn = new javax.swing.JButton();
         manageTestsBtn = new javax.swing.JButton();
         labInfoBtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -95,16 +94,8 @@ public class LabSideNavWorkAreaJpanel extends javax.swing.JPanel {
         jLabel3.setText("Hospital Admin!");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 120, 30));
 
-        requestBtn.setBackground(new java.awt.Color(204, 204, 204));
-        requestBtn.setText("Test Requests");
-        requestBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                requestBtnActionPerformed(evt);
-            }
-        });
-        jPanel3.add(requestBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
-
         manageTestsBtn.setBackground(new java.awt.Color(204, 204, 204));
+        manageTestsBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         manageTestsBtn.setText("Manage Tests");
         manageTestsBtn.setMaximumSize(new java.awt.Dimension(200, 40));
         manageTestsBtn.setMinimumSize(new java.awt.Dimension(200, 40));
@@ -114,24 +105,26 @@ public class LabSideNavWorkAreaJpanel extends javax.swing.JPanel {
                 manageTestsBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(manageTestsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        jPanel3.add(manageTestsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         labInfoBtn.setBackground(new java.awt.Color(204, 204, 204));
-        labInfoBtn.setText("Lab Info");
+        labInfoBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        labInfoBtn.setText("Lab Information");
         labInfoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 labInfoBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(labInfoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 200, 40));
+        jPanel3.add(labInfoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 200, 40));
 
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton1.setText("Place Order");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 190, 40));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 200, 40));
 
         rightSystemAdminPanel.setBackground(new java.awt.Color(255, 255, 255));
         rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(1058, 840));
@@ -186,14 +179,6 @@ public class LabSideNavWorkAreaJpanel extends javax.swing.JPanel {
         layout.next(rightSystemAdminPanel);
     }//GEN-LAST:event_manageTestsBtnActionPerformed
 
-    private void requestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestBtnActionPerformed
-        // TODO add your handling code here:
-        LabTestRequestJPanel labTestRequestJPanel = new LabTestRequestJPanel(rightSystemAdminPanel, account, business);
-        rightSystemAdminPanel.add("LabTestRequestJPanel", labTestRequestJPanel);
-        CardLayout layout = (CardLayout) rightSystemAdminPanel.getLayout();
-        layout.next(rightSystemAdminPanel);
-    }//GEN-LAST:event_requestBtnActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         LabOrderAreaJPanel labOrderAreaJPanel = new LabOrderAreaJPanel(rightSystemAdminPanel, account, business);
@@ -210,7 +195,6 @@ public class LabSideNavWorkAreaJpanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton labInfoBtn;
     private javax.swing.JButton manageTestsBtn;
-    private javax.swing.JButton requestBtn;
     private javax.swing.JPanel rightSystemAdminPanel;
     private javax.swing.JPanel systemAdminPanel;
     // End of variables declaration//GEN-END:variables

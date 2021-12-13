@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Jatin Bali
+ * @author shrutikasalian
  */
 public class PatientDirectory {
     

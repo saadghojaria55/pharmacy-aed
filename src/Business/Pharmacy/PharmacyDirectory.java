@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Jatin Bali
+ * @author Saad Ghojaria
  */
 public class PharmacyDirectory {
     

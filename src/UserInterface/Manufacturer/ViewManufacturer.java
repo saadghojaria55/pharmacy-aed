@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author srushtidesai
+ * @author Saad Ghojaria
  */
 public class ViewManufacturer extends javax.swing.JPanel {
 
@@ -74,52 +74,58 @@ public class ViewManufacturer extends javax.swing.JPanel {
         setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Manufacturer Name:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Phone number:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, 20));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, -1, 20));
 
         TxtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtNameActionPerformed(evt);
             }
         });
-        add(TxtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 170, -1));
-        add(TxtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 170, -1));
+        add(TxtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 170, -1));
+        add(TxtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 170, -1));
 
+        Savebtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         Savebtn.setText("Save");
         Savebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SavebtnActionPerformed(evt);
             }
         });
-        add(Savebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 110, -1));
+        add(Savebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, 120, -1));
 
-        Backbtn.setText("<Back");
+        Backbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        Backbtn.setText("< Back");
         Backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackbtnActionPerformed(evt);
             }
         });
-        add(Backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 100, -1));
+        add(Backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 140, -1));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("E-mail:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, -1, 20));
-        add(Txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 170, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, -1, 20));
+        add(Txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 170, -1));
 
+        updateBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         updateBtn.setText("Update");
         updateBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateBtnActionPerformed(evt);
             }
         });
-        add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 100, -1));
+        add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 120, -1));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MANUFACTURER DETAILS");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void TxtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNameActionPerformed

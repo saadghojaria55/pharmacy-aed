@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author Saad Ghojaria
  */
 public class CreateHospitalJPanel extends javax.swing.JPanel {
 
@@ -103,18 +103,19 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         jLabel7.setText("Admin Name:");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 90, 20));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Sign Up New Hospital");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, -1, -1));
+        jLabel1.setText("SIGN UP NEW HOSPITAL");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, -1, -1));
 
+        btnSave.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
-        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 480, -1, -1));
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 480, 160, -1));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/icons8-back-arrow-24.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -135,7 +136,7 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, 20));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setIcon(new javax.swing.ImageIcon("/Users/shrutikasalian/Desktop/doc3.jpeg")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/doc3.jpeg"))); // NOI18N
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, -140, 1770, 950));
     }// </editor-fold>//GEN-END:initComponents
 

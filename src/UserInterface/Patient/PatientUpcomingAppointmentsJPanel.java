@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Saad Ghojaria
+ * @author shrutikasalian
  */
 public class PatientUpcomingAppointmentsJPanel extends javax.swing.JPanel {
     
@@ -93,12 +93,13 @@ public class PatientUpcomingAppointmentsJPanel extends javax.swing.JPanel {
         jTable4 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
 
-        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel4.setBackground(new java.awt.Color(138, 194, 211));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel4.setText("Upcoming Appointments");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 52, -1, 58));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("UPCOMING APPOINTMENTS");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, 58));
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,15 +114,16 @@ public class PatientUpcomingAppointmentsJPanel extends javax.swing.JPanel {
         ));
         jScrollPane4.setViewportView(jTable4);
 
-        jPanel4.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 700, 183));
+        jPanel4.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 700, 183));
 
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton5.setText("Cancel an Appointment");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 355, -1, -1));
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 210, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

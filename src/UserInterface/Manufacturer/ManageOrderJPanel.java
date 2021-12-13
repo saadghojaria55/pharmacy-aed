@@ -10,8 +10,14 @@ import Business.Ecosystem;
 import Business.Manufacturer.Manufacturer;
 import Business.Manufacturer.ManufacturerDirectory;
 import Business.UserAccount.UserAccount;
+import UserInterface.Ambulance.UpdateStatusJPanel;
+import UserInterface.LabManuRequest.orderItemsManu;
 import java.awt.CardLayout;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import static sun.tools.jconsole.LabeledComponent.layout;
 
 /**
  *
@@ -63,15 +69,23 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
 
         tblOrderList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Lab Id", "Lab Name", "Lab Contact Number", "Lab Address", "Lab Type", "Order Id", "Order Time", "Order Status"
+                "Manufacturer ID", "Manufacturer Name", "Contact", "Email Address"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tblOrderList);
 
         jButton1.setText("<Back");
@@ -81,8 +95,10 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton2.setText("Order Details");
 
+        btnAddItem.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         btnAddItem.setText("Add");
         btnAddItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,23 +111,25 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(61, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 754, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 754, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAddItem, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(26, 26, 26))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(225, 225, 225))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(225, 225, 225))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAddItem, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(313, 313, 313))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,11 +138,11 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnAddItem, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(btnAddItem))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(56, 56, 56))
         );
@@ -136,12 +154,23 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
 
     private void btnAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddItemActionPerformed
         // TODO add your handling code here:
-        AddItemJPanel amjp = new AddItemJPanel(CardLayoutJPanel, business, userAccount);
-        CardLayoutJPanel.add("AddItemJPanel",amjp);
-        CardLayout layout=(CardLayout)CardLayoutJPanel.getLayout();
-        layout.next(CardLayoutJPanel);
+        /*int row = tblOrderList.getSelectedRow();
+        if(row<0) {
+            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        else{
+          
+           String manuId;
+           manuId= (String) tblOrderList.getValueAt(row, 0);
+                
+                 orderItemsManu oim =new orderItemsManu (CardLayoutJPanel,userAccount,business,manuId);
+                 CardLayoutJPanel.add("UpdateStatusPanel",oim);
+                 CardLayout layout=(CardLayout)CardLayoutJPanel.getLayout();
+                 layout.next(CardLayoutJPanel);
+        }*/
+        
     }//GEN-LAST:event_btnAddItemActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddItem;
@@ -153,6 +182,25 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void populateOrderDetails() {
+        ArrayList<Manufacturer> manuList = business.getManufacturerDirectory().getManufacturerList();
+    
+        int rowCount = tblOrderList.getRowCount();
+        DefaultTableModel model = (DefaultTableModel)tblOrderList.getModel();
+        for(int i=rowCount-1;i>=0;i--) {
+            model.removeRow(i);
+        }
         
+        for(Manufacturer m: manuList) {
+            Object row[] = new Object[6];
+            row[0] = m.getManuId();
+            row[1] = m.getManuName();
+            row[2] = m.getPhoneNumber();
+            row[3] = m.getEmailAddress();
+           
+           
+           
+            
+            model.addRow(row);
+        }
     }
 }

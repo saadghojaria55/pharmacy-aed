@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Jatin Bali
+ * @author shrutikasalian
  */
 public class DoctorSideNavWorkAreaJpanel extends javax.swing.JPanel {
 
@@ -68,11 +68,11 @@ public class DoctorSideNavWorkAreaJpanel extends javax.swing.JPanel {
         systemAdminPanel.setLayout(systemAdminPanelLayout);
         systemAdminPanelLayout.setHorizontalGroup(
             systemAdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1780, Short.MAX_VALUE)
+            .addGap(0, 1788, Short.MAX_VALUE)
         );
         systemAdminPanelLayout.setVerticalGroup(
             systemAdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2424, Short.MAX_VALUE)
+            .addGap(0, 1019, Short.MAX_VALUE)
         );
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
@@ -85,6 +85,7 @@ public class DoctorSideNavWorkAreaJpanel extends javax.swing.JPanel {
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 120, 30));
 
         appointmentsBtn.setBackground(new java.awt.Color(204, 204, 204));
+        appointmentsBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         appointmentsBtn.setText("Appointments");
         appointmentsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +95,7 @@ public class DoctorSideNavWorkAreaJpanel extends javax.swing.JPanel {
         jPanel3.add(appointmentsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
 
         patientHistorybtn.setBackground(new java.awt.Color(204, 204, 204));
+        patientHistorybtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         patientHistorybtn.setText("Patient History");
         patientHistorybtn.setMaximumSize(new java.awt.Dimension(200, 40));
         patientHistorybtn.setMinimumSize(new java.awt.Dimension(200, 40));
@@ -106,6 +108,7 @@ public class DoctorSideNavWorkAreaJpanel extends javax.swing.JPanel {
         jPanel3.add(patientHistorybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         createPrescriptionbtn.setBackground(new java.awt.Color(204, 204, 204));
+        createPrescriptionbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         createPrescriptionbtn.setText("Prescriptions");
         createPrescriptionbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +118,7 @@ public class DoctorSideNavWorkAreaJpanel extends javax.swing.JPanel {
         jPanel3.add(createPrescriptionbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 200, 40));
 
         labTestRequestBtn.setBackground(new java.awt.Color(204, 204, 204));
+        labTestRequestBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         labTestRequestBtn.setText("Request Lab Test");
         labTestRequestBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +128,8 @@ public class DoctorSideNavWorkAreaJpanel extends javax.swing.JPanel {
         jPanel3.add(labTestRequestBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 200, 40));
 
         personalInfoBtn1.setBackground(new java.awt.Color(204, 204, 204));
-        personalInfoBtn1.setText("Personal Info");
+        personalInfoBtn1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        personalInfoBtn1.setText("Personal Information");
         personalInfoBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personalInfoBtn1ActionPerformed(evt);

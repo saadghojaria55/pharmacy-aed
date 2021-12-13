@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Jatin Bali
+ * @author srushtidesai
  */
 public class Pharmacy {
     

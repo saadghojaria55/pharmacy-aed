@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author srushtidesai
  */
 public class CreatePharmacyJPanel extends javax.swing.JPanel {
 
@@ -65,65 +65,67 @@ public class CreatePharmacyJPanel extends javax.swing.JPanel {
         addressTxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jPanel1.setBackground(new java.awt.Color(138, 194, 211));
         jPanel1.setPreferredSize(new java.awt.Dimension(850, 540));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Sign Up New Pharmacy");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 286, 42));
+        jLabel1.setText("SIGN UP NEW PHARMACY");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, 320, 42));
 
         passwordTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordTxtActionPerformed(evt);
             }
         });
-        jPanel1.add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 200, 30));
+        jPanel1.add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 200, 30));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Contact Number:");
         jLabel4.setToolTipText("");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
 
         contactNumberTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contactNumberTxtActionPerformed(evt);
             }
         });
-        jPanel1.add(contactNumberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, 200, 30));
+        jPanel1.add(contactNumberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, 200, 30));
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Email:");
         jLabel5.setToolTipText("");
         jLabel5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, -1, -1));
 
         emailtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailtxtActionPerformed(evt);
             }
         });
-        jPanel1.add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 330, 200, 30));
+        jPanel1.add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 330, 200, 30));
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Name:");
         jLabel6.setToolTipText("");
         jLabel6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 380, 40, -1));
-        jPanel1.add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 370, 200, 30));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 380, 40, -1));
+        jPanel1.add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, 200, 30));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("License Number:");
         jLabel7.setToolTipText("");
         jLabel7.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 420, -1, -1));
-        jPanel1.add(licenseTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 410, 200, 30));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, -1, -1));
+        jPanel1.add(licenseTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 200, 30));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/icons8-back-arrow-24.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -131,66 +133,54 @@ public class CreatePharmacyJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, -1, -1));
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, -1, -1));
 
+        btnSave.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 500, -1, -1));
+        jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 140, -1));
 
         usernameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameTxtActionPerformed(evt);
             }
         });
-        jPanel1.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 210, 200, 30));
+        jPanel1.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 200, 30));
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Password:");
         jLabel8.setToolTipText("");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 260, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, -1, -1));
 
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Username:");
         jLabel9.setToolTipText("");
         jLabel9.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 220, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 220, -1, -1));
 
         jLabel10a.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10a.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10a.setText("Address:");
         jLabel10a.setToolTipText("");
         jLabel10a.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel10a, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, -1, -1));
-        jPanel1.add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 450, 200, 30));
+        jPanel1.add(jLabel10a, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, -1, -1));
+        jPanel1.add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, 200, 30));
 
         jLabel2.setBackground(new java.awt.Color(138, 194, 211));
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/shrutikasalian/Desktop/pharmacy1.jpeg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/pharmacy1.jpeg"))); // NOI18N
         jLabel2.setToolTipText("");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -20, 1060, 710));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, -10, 1060, 710));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1013, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1013, 674));
     }// </editor-fold>//GEN-END:initComponents
 
     private void passwordTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTxtActionPerformed

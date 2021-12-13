@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshee Naik
+ * @author shrutikasalian
  */
 public class PharmacyInfoJPanel extends javax.swing.JPanel {
 
@@ -77,13 +77,15 @@ public class PharmacyInfoJPanel extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         addressTxt = new javax.swing.JTextField();
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(138, 194, 211));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText(" Pharmacy Information");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 46, 286, 42));
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText(" PHARMACY INFORMATION");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 520, 42));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Contact Number");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 151, -1, -1));
 
@@ -94,6 +96,7 @@ public class PharmacyInfoJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(contactNumberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 146, 126, -1));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Email");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 195, -1, -1));
 
@@ -104,14 +107,17 @@ public class PharmacyInfoJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 190, 126, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Name");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 239, -1, -1));
         jPanel1.add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 234, 126, -1));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("License Number");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
         jPanel1.add(licenseTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 126, -1));
 
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         btnBack.setText("< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,22 +126,25 @@ public class PharmacyInfoJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 59, -1, -1));
 
+        saveBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         saveBtn.setText("Save");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, -1, -1));
+        jPanel1.add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 380, 120, -1));
 
+        UpdateBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         UpdateBtn.setText("Update");
         UpdateBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UpdateBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(UpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, -1, -1));
+        jPanel1.add(UpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, 120, -1));
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Address");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 338, -1, -1));
         jPanel1.add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 333, 126, -1));

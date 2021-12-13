@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author srushtidesai
  */
 
 public class SystemAdminAmbulanceJPanel extends javax.swing.JPanel {
@@ -80,23 +80,25 @@ public class SystemAdminAmbulanceJPanel extends javax.swing.JPanel {
         deleteBtn = new javax.swing.JButton();
         viewAmbulanceBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backBtn.setText("<back");
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        backBtn.setText("< ");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 570, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 50, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MANAGE AMBULANCE ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
 
         ambulanceTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,42 +113,48 @@ public class SystemAdminAmbulanceJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(ambulanceTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 480, 260));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 770, 260));
 
+        refreshBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         refreshBtn.setText("Refresh");
         refreshBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshBtnActionPerformed(evt);
             }
         });
-        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, -1, -1));
+        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 200, 40));
 
-        createAmbulanceBtn.setText("Add New");
+        createAmbulanceBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        createAmbulanceBtn.setText("Add ");
         createAmbulanceBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createAmbulanceBtnActionPerformed(evt);
             }
         });
-        add(createAmbulanceBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, -1, -1));
+        add(createAmbulanceBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, 200, 40));
 
+        deleteBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteBtnActionPerformed(evt);
             }
         });
-        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 440, 100, -1));
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, 200, 40));
 
+        viewAmbulanceBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         viewAmbulanceBtn.setText("View");
         viewAmbulanceBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewAmbulanceBtnActionPerformed(evt);
             }
         });
-        add(viewAmbulanceBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, 90, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/shrutikasalian/Desktop/ambulance1.jpeg")); // NOI18N
+        add(viewAmbulanceBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 579, 200, 40));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+
+        jLabel3.setBackground(new java.awt.Color(138, 194, 211));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/cover1.jpeg"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 1180, 790));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -215,6 +223,7 @@ public class SystemAdminAmbulanceJPanel extends javax.swing.JPanel {
     private javax.swing.JButton deleteBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton refreshBtn;
     private javax.swing.JButton viewAmbulanceBtn;

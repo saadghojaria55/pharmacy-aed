@@ -59,50 +59,68 @@ public class AddManufacturerJPanel extends javax.swing.JPanel {
         Backbtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Txtemail = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(13, 37, 70));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Manufacturer Name:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, -1, 50));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Username:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, -1, 30));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Password:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, -1, 30));
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Phone number:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, -1, 30));
 
         TxtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtNameActionPerformed(evt);
             }
         });
-        add(TxtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 170, -1));
-        add(TxtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 150, -1));
-        add(TxtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 170, -1));
-        add(TxtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 160, -1));
+        add(TxtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, 170, -1));
+        add(TxtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 170, -1));
+        add(TxtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 170, -1));
+        add(TxtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 300, 170, -1));
 
+        Savebtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         Savebtn.setText("Save");
         Savebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SavebtnActionPerformed(evt);
             }
         });
-        add(Savebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, -1, -1));
+        add(Savebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 150, -1));
 
-        Backbtn.setText("Back");
+        Backbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        Backbtn.setText("< ");
         Backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackbtnActionPerformed(evt);
             }
         });
-        add(Backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, -1, -1));
+        add(Backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 50, -1));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("E-mail:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, -1, -1));
-        add(Txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 180, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 326, -1, 60));
+        add(Txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, 170, -1));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("ADD MANUFACTURER");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, -1, 50));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/Manu1.jpeg"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 840, 430));
     }// </editor-fold>//GEN-END:initComponents
 
     private void TxtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNameActionPerformed
@@ -173,6 +191,8 @@ public class AddManufacturerJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField TxtUsername;
     private javax.swing.JTextField Txtemail;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

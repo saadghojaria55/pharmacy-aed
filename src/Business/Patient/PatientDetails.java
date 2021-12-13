@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  *
- * @author Jatin Bali
+ * @author shrutikasalian
  */
 public class PatientDetails {
     

@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Jatin Bali
+ * @author shrutikasalian
  */
 public class HospitalInfoJPanel extends javax.swing.JPanel {
 
@@ -122,81 +122,91 @@ public class HospitalInfoJPanel extends javax.swing.JPanel {
         adminTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         licenseTxt = new javax.swing.JTextField();
+        backBtn = new javax.swing.JButton();
         UpdateBtn = new javax.swing.JButton();
         saveBtn = new javax.swing.JButton();
-        backBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(138, 194, 211));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Hospital Information");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 286, 42));
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("HOSPITAL INFORMATION");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 480, 42));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Hospital Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Hospital ID");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
 
         nameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameTxtActionPerformed(evt);
             }
         });
-        jPanel1.add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 150, 30));
-        jPanel1.add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 150, 30));
+        jPanel1.add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 150, 30));
+        jPanel1.add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 150, 30));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Contact Number");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
-        jPanel1.add(contactNumberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 150, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
+        jPanel1.add(contactNumberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 150, 30));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Address");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, -1, -1));
 
         addressTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressTxtActionPerformed(evt);
             }
         });
-        jPanel1.add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 150, -1));
+        jPanel1.add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 150, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Hospital Admin Name");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
-        jPanel1.add(adminTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 150, -1));
+        jPanel1.add(adminTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 150, -1));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("License Number");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
-        jPanel1.add(licenseTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 150, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+        jPanel1.add(licenseTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 150, -1));
 
-        UpdateBtn.setText("Update");
-        UpdateBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UpdateBtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(UpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, -1, 380));
 
-        saveBtn.setText("Save");
-        saveBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveBtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, -1, -1));
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, -1, -1));
-
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         backBtn.setText("< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 110, -1));
+
+        UpdateBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        UpdateBtn.setText("Update");
+        UpdateBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdateBtnActionPerformed(evt);
+            }
+        });
+        add(UpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 120, -1));
+
+        saveBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        saveBtn.setText("Save");
+        saveBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveBtnActionPerformed(evt);
+            }
+        });
+        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 110, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addressTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressTxtActionPerformed

@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author srushtidesai
  */
 public class PatientReportViewJPanel extends javax.swing.JPanel {
 
@@ -46,16 +46,17 @@ public class PatientReportViewJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("<back");
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        jButton1.setText("< Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 16, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 120, -1));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 6, 417, 545));
     }// </editor-fold>//GEN-END:initComponents
 

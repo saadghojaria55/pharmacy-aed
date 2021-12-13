@@ -20,7 +20,7 @@ import UserInterface.Lab.LabInfoJpanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author Saad Ghojaria
  */
 
 public class SystemAdminLabJPanel extends javax.swing.JPanel {
@@ -95,12 +95,12 @@ public class SystemAdminLabJPanel extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 173, 30, 30));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, 30, 30));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Lab Portal");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, -1, -1));
+        jLabel1.setText("LAB PORTAL ");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, -1, -1));
 
         labTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -115,42 +115,47 @@ public class SystemAdminLabJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(labTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 760, 131));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 760, 190));
 
+        refreshBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         refreshBtn.setText("Refresh");
         refreshBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshBtnActionPerformed(evt);
             }
         });
-        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 170, -1));
+        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 40));
 
+        createLabBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         createLabBtn.setText("Sign up New Lab");
         createLabBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createLabBtnActionPerformed(evt);
             }
         });
-        add(createLabBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 170, -1));
+        add(createLabBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 460, 190, 40));
 
+        deleteBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         deleteBtn.setText("Delete Existing Lab");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteBtnActionPerformed(evt);
             }
         });
-        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 460, 170, -1));
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, 190, 40));
 
+        viewHospitalBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         viewHospitalBtn.setText("View Details");
         viewHospitalBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewHospitalBtnActionPerformed(evt);
             }
         });
-        add(viewHospitalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, 170, -1));
+        add(viewHospitalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 580, 190, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/HBKG_2.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, -50, 1180, 790));
+        jLabel2.setBackground(new java.awt.Color(138, 194, 211));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/cover1.jpeg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 1180, 790));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

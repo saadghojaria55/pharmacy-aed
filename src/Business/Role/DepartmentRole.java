@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author srushtidesai
  */
 public class DepartmentRole extends Role {
     

@@ -34,6 +34,7 @@ public class ConfirmManuOrder extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
 
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         manuTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -57,25 +58,28 @@ public class ConfirmManuOrder extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(manuTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 690, 230));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 690, 230));
 
-        jButton1.setText("CONFIRM ");
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        jButton1.setText("Confirm");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 120, 40));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, 180, 40));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CONFIRM ORDER");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, -1, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Quantity:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, 20));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, -1, 20));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 110, -1));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 110, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

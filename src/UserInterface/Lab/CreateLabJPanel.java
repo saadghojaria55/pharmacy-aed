@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author srushtidesai
  */
 public class CreateLabJPanel extends javax.swing.JPanel {
 
@@ -62,71 +62,85 @@ public class CreateLabJPanel extends javax.swing.JPanel {
         passwordTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(13, 37, 70));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backBtn.setText("<back");
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        backBtn.setText("< ");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 21, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 60, -1));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel1.setText("Lab Information");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(193, 65, -1, -1));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("LAB INFORMATION");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Lab Name:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
-        add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 221, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, 20));
+        add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 221, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Contact number:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
-        add(numberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 221, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, -1, 30));
+        add(numberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 221, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Email id:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, -1, 30));
 
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailTxtActionPerformed(evt);
             }
         });
-        add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 221, -1));
+        add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 320, 221, -1));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Address:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, -1, 20));
 
         addressTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressTxtActionPerformed(evt);
             }
         });
-        add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 221, -1));
+        add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, 221, -1));
 
+        saveBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         saveBtn.setText("Save");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
             }
         });
-        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, -1, -1));
+        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 440, 120, -1));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Username:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
-        add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 221, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, 30));
+        add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 221, -1));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Password:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 217, -1, -1));
-        add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 212, 221, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, -1, 20));
+        add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 221, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Type:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, -1, 20));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pathology Lab", "Neurology Lab", "Orthopedic Lab" }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 221, -1));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, 220, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/lab2.jpeg"))); // NOI18N
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 900, 480));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -215,6 +229,7 @@ public class CreateLabJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField nameTxt;
     private javax.swing.JTextField numberTxt;
     private javax.swing.JTextField passwordTxt;

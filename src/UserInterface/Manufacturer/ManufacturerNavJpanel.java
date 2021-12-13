@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author srushtidesai
+ * @author Saad Ghojaria
  */
 public class ManufacturerNavJpanel extends javax.swing.JPanel {
 

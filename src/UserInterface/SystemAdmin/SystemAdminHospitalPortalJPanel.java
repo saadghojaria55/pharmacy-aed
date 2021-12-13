@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author Saad Ghojaria
  */
 public class SystemAdminHospitalPortalJPanel extends javax.swing.JPanel {
 
@@ -77,8 +77,9 @@ public class SystemAdminHospitalPortalJPanel extends javax.swing.JPanel {
         viewHospitalBtn = new javax.swing.JButton();
         createHospitalBtn = new javax.swing.JButton();
         refreshBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         hospitalTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -94,51 +95,61 @@ public class SystemAdminHospitalPortalJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(hospitalTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 760, 131));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 760, 220));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        jLabel1.setText("Hospital Portal");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 22, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("HOSPITAL PORTAL");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, -1, -1));
 
-        backBtn.setText("<back");
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        backBtn.setText("<");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 23, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 50, -1));
 
-        deleteBtn.setText("Delete Existing Hospital");
+        deleteBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        deleteBtn.setText("Delete ");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteBtnActionPerformed(evt);
             }
         });
-        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 190, -1));
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 510, 190, 40));
 
-        viewHospitalBtn.setText("View Details");
+        viewHospitalBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        viewHospitalBtn.setText("View ");
         viewHospitalBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewHospitalBtnActionPerformed(evt);
             }
         });
-        add(viewHospitalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, 190, -1));
+        add(viewHospitalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 560, 190, 40));
 
-        createHospitalBtn.setText("Sign up New Hospital");
+        createHospitalBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        createHospitalBtn.setText("Add");
         createHospitalBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createHospitalBtnActionPerformed(evt);
             }
         });
-        add(createHospitalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 190, -1));
+        add(createHospitalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 190, 40));
 
+        refreshBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         refreshBtn.setText("Refresh");
         refreshBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshBtnActionPerformed(evt);
             }
         });
-        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 140, -1));
+        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, 190, 40));
+
+        jLabel2.setBackground(new java.awt.Color(138, 194, 211));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/cover1.jpeg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 1180, 790));
     }// </editor-fold>//GEN-END:initComponents
 
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
@@ -206,6 +217,7 @@ public class SystemAdminHospitalPortalJPanel extends javax.swing.JPanel {
     private javax.swing.JButton deleteBtn;
     private javax.swing.JTable hospitalTable;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton refreshBtn;
     private javax.swing.JButton viewHospitalBtn;

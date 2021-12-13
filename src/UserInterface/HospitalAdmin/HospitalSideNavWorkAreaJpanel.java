@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author srushtidesai
  */
 public class HospitalSideNavWorkAreaJpanel extends javax.swing.JPanel {
 
@@ -49,7 +49,6 @@ public class HospitalSideNavWorkAreaJpanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         manageDoctorsbtn = new javax.swing.JButton();
         editHospitalInfo = new javax.swing.JButton();
-        hospitalInventory = new javax.swing.JButton();
         manageDepartments = new javax.swing.JButton();
         managePatientsBtn1 = new javax.swing.JButton();
         ManageRooms = new javax.swing.JButton();
@@ -82,16 +81,18 @@ public class HospitalSideNavWorkAreaJpanel extends javax.swing.JPanel {
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 120, 30));
 
         manageDoctorsbtn.setBackground(new java.awt.Color(204, 204, 204));
+        manageDoctorsbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         manageDoctorsbtn.setText("Manage Doctors");
         manageDoctorsbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageDoctorsbtnActionPerformed(evt);
             }
         });
-        jPanel3.add(manageDoctorsbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
+        jPanel3.add(manageDoctorsbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 200, 40));
 
         editHospitalInfo.setBackground(new java.awt.Color(204, 204, 204));
-        editHospitalInfo.setText("Edit Info");
+        editHospitalInfo.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        editHospitalInfo.setText("Edit Information");
         editHospitalInfo.setMaximumSize(new java.awt.Dimension(200, 40));
         editHospitalInfo.setMinimumSize(new java.awt.Dimension(200, 40));
         editHospitalInfo.setPreferredSize(new java.awt.Dimension(200, 40));
@@ -100,43 +101,37 @@ public class HospitalSideNavWorkAreaJpanel extends javax.swing.JPanel {
                 editHospitalInfoActionPerformed(evt);
             }
         });
-        jPanel3.add(editHospitalInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
-
-        hospitalInventory.setBackground(new java.awt.Color(204, 204, 204));
-        hospitalInventory.setText("Hospital Inventory");
-        hospitalInventory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hospitalInventoryActionPerformed(evt);
-            }
-        });
-        jPanel3.add(hospitalInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 200, 40));
+        jPanel3.add(editHospitalInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
 
         manageDepartments.setBackground(new java.awt.Color(204, 204, 204));
+        manageDepartments.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         manageDepartments.setText("Manage Departments");
         manageDepartments.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageDepartmentsActionPerformed(evt);
             }
         });
-        jPanel3.add(manageDepartments, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 200, 40));
+        jPanel3.add(manageDepartments, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 200, 40));
 
         managePatientsBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        managePatientsBtn1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         managePatientsBtn1.setText("Manage Patients");
         managePatientsBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 managePatientsBtn1ActionPerformed(evt);
             }
         });
-        jPanel3.add(managePatientsBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 200, 40));
+        jPanel3.add(managePatientsBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 200, 40));
 
         ManageRooms.setBackground(new java.awt.Color(204, 204, 204));
+        ManageRooms.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         ManageRooms.setText("Manage Rooms");
         ManageRooms.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ManageRoomsActionPerformed(evt);
             }
         });
-        jPanel3.add(ManageRooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 200, 40));
+        jPanel3.add(ManageRooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 200, 40));
 
         rightSystemAdminPanel.setBackground(new java.awt.Color(255, 255, 255));
         rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(1058, 840));
@@ -183,12 +178,6 @@ public class HospitalSideNavWorkAreaJpanel extends javax.swing.JPanel {
         layout.next(rightSystemAdminPanel);
     }//GEN-LAST:event_manageDepartmentsActionPerformed
 
-    private void hospitalInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospitalInventoryActionPerformed
-        // TODO add your handling code here:
-        
-       
-    }//GEN-LAST:event_hospitalInventoryActionPerformed
-
     private void editHospitalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editHospitalInfoActionPerformed
         // TODO add your handling code here:
         HospitalInfoJPanel hospitalInfoJpanel  = new HospitalInfoJPanel(rightSystemAdminPanel, account, business);
@@ -201,7 +190,7 @@ public class HospitalSideNavWorkAreaJpanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         Department dpt = new Department();
         hospital = (Hospital) this.account.getDetails();
-        ManagePhysicianJPanel systemAdminHospitalPortalJPanel = new ManagePhysicianJPanel(rightSystemAdminPanel, hospital, dpt, business);
+        ManagePhysicianJPanel systemAdminHospitalPortalJPanel = new ManagePhysicianJPanel(rightSystemAdminPanel, hospital, dpt, business,account);
         rightSystemAdminPanel.add("SystemAdminHospitalPortalJPanel", systemAdminHospitalPortalJPanel);
         CardLayout layout = (CardLayout) rightSystemAdminPanel.getLayout();
         layout.next(rightSystemAdminPanel);
@@ -226,7 +215,6 @@ public class HospitalSideNavWorkAreaJpanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ManageRooms;
     private javax.swing.JButton editHospitalInfo;
-    private javax.swing.JButton hospitalInventory;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel3;

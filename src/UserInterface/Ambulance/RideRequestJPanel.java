@@ -10,6 +10,7 @@ import Business.Ecosystem;
 import Business.Patient.Patient;
 import Business.SOSRequest.SOSRequests;
 import Business.UserAccount.UserAccount;
+import UserInterface.SystemAdmin.SystemAdminAmbulanceJPanel;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -80,6 +81,7 @@ public class RideRequestJPanel extends javax.swing.JPanel {
         sosreq = new javax.swing.JTable();
         UpdateStatus = new javax.swing.JButton();
         RefreshBtn = new javax.swing.JButton();
+        BackBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,7 +107,7 @@ public class RideRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(sosreq);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 145, 806, 239));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 490, 320));
 
         UpdateStatus.setText("UPDATE STATUS");
         UpdateStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +115,7 @@ public class RideRequestJPanel extends javax.swing.JPanel {
                 UpdateStatusActionPerformed(evt);
             }
         });
-        add(UpdateStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 396, 163, 51));
+        add(UpdateStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, 163, 51));
 
         RefreshBtn.setText("Refresh");
         RefreshBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +123,15 @@ public class RideRequestJPanel extends javax.swing.JPanel {
                 RefreshBtnActionPerformed(evt);
             }
         });
-        add(RefreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
+        add(RefreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 100, -1));
+
+        BackBtn.setText("<Back");
+        BackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackBtnActionPerformed(evt);
+            }
+        });
+        add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void UpdateStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateStatusActionPerformed
@@ -146,8 +156,18 @@ public class RideRequestJPanel extends javax.swing.JPanel {
        populateSOSTable();
     }//GEN-LAST:event_RefreshBtnActionPerformed
 
+    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
+        // TODO add your handling code here:
+        AmbulanceWorkAreaJPanel updateStatusJPanel =new AmbulanceWorkAreaJPanel(CardLayoutJPanel,account,business);
+        CardLayoutJPanel.add("UpdateStatusPanel",updateStatusJPanel);
+        CardLayout layout=(CardLayout)CardLayoutJPanel.getLayout();
+        layout.next(CardLayoutJPanel);
+               
+    }//GEN-LAST:event_BackBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackBtn;
     private javax.swing.JButton RefreshBtn;
     private javax.swing.JButton UpdateStatus;
     private javax.swing.JScrollPane jScrollPane1;

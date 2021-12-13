@@ -54,7 +54,6 @@ public class LoginJPanel extends javax.swing.JPanel {
         passlabel = new javax.swing.JLabel();
         loginJButton = new javax.swing.JButton();
         passwordField = new javax.swing.JPasswordField();
-        registerBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
@@ -127,14 +126,6 @@ public class LoginJPanel extends javax.swing.JPanel {
             }
         });
 
-        registerBtn.setFont(new java.awt.Font("Verdana", 3, 12)); // NOI18N
-        registerBtn.setText("Register");
-        registerBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerBtnActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -150,10 +141,8 @@ public class LoginJPanel extends javax.swing.JPanel {
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addComponent(userNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(loginJButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(registerBtn, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addContainerGap(116, Short.MAX_VALUE))
+                    .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,21 +158,19 @@ public class LoginJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(passlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49))
+                        .addContainerGap(123, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37)
                         .addComponent(loginJButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(registerBtn)
-                .addContainerGap(49, Short.MAX_VALUE))
+                        .addContainerGap(87, Short.MAX_VALUE))))
         );
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 430, 320));
 
         jLabel2.setBackground(new java.awt.Color(195, 195, 195));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/HBKG_1.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/cover1.jpeg"))); // NOI18N
         jLabel2.setAutoscrolls(true);
         jLabel2.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         jLabel2.setPreferredSize(new java.awt.Dimension(2000, 1200));
@@ -232,26 +219,6 @@ public class LoginJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_loginJButtonActionPerformed
 
-    private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
-        // TODO add your handling code here:
-//        UserRegistrationJPanel panel = new UserRegistrationJPanel(container, system);
-//        greetingUserLabel.setText( "WELCOME NEW VOLUNTEER ORGANIZATION REGISTRATION!!!");
-//        //emoRR panel = new demoRR(container, system);
-//        //container.add("UserRegistrationJPanel", panel);
-//        jPanel2.setVisible(false);
-//        container.setVisible(true);
-//        leftPanel.setVisible(true);
-//        btnLogoutLabel.setVisible(false);
-//        btnBackLabel.setVisible(true);
-//        userNameJTextField.setText("");
-//        passwordField.setText("");
-//        //cc();
-//        //SystemAdminRole r = new SystemAdminRole();
-//        container.add("workArea", panel);
-//        CardLayout layout = (CardLayout) container.getLayout();
-//        layout.next(container);
-    }//GEN-LAST:event_registerBtnActionPerformed
-
     private void btnLogoutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutLabelMouseClicked
         // TODO add your handling code here:
         dB4OUtil.storeSystem(business);
@@ -275,7 +242,6 @@ public class LoginJPanel extends javax.swing.JPanel {
     private javax.swing.JButton loginJButton;
     private javax.swing.JLabel passlabel;
     private javax.swing.JPasswordField passwordField;
-    private javax.swing.JButton registerBtn;
     private javax.swing.JTextField userNameJTextField;
     // End of variables declaration//GEN-END:variables
 }

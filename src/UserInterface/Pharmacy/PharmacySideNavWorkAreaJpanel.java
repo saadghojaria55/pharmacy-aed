@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshee Naik
+ * @author Saad Ghojaria
  */
 public class PharmacySideNavWorkAreaJpanel extends javax.swing.JPanel {
 
@@ -97,6 +97,7 @@ public class PharmacySideNavWorkAreaJpanel extends javax.swing.JPanel {
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 140, 30));
 
         pastPrescriptionsBtn.setBackground(new java.awt.Color(204, 204, 204));
+        pastPrescriptionsBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         pastPrescriptionsBtn.setText("Past Prescriptions");
         pastPrescriptionsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +107,7 @@ public class PharmacySideNavWorkAreaJpanel extends javax.swing.JPanel {
         jPanel3.add(pastPrescriptionsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
 
         prescriptionsBtn.setBackground(new java.awt.Color(204, 204, 204));
+        prescriptionsBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         prescriptionsBtn.setText("Prescriptions");
         prescriptionsBtn.setMaximumSize(new java.awt.Dimension(200, 40));
         prescriptionsBtn.setMinimumSize(new java.awt.Dimension(200, 40));
@@ -156,6 +158,10 @@ public class PharmacySideNavWorkAreaJpanel extends javax.swing.JPanel {
 
     private void prescriptionsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prescriptionsBtnActionPerformed
         // TODO add your handling code here:
+        PendingPrescriptionsJPanel pendingPrescriptionsJPanel = new PendingPrescriptionsJPanel(rightSystemAdminPanel, account, this.pharmacy, business);
+        rightSystemAdminPanel.add("PastPrescriptionsJPanel", pendingPrescriptionsJPanel);
+        CardLayout layout = (CardLayout) rightSystemAdminPanel.getLayout();
+        layout.next(rightSystemAdminPanel); 
         
     }//GEN-LAST:event_prescriptionsBtnActionPerformed
 

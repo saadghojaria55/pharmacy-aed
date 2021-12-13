@@ -81,53 +81,60 @@ public class PatientDetailsJPanel extends javax.swing.JPanel {
         addNotesBtn = new javax.swing.JButton();
         saveBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        add(hospitalTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 18, 382, -1));
-        add(DoctorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 50, 382, -1));
-        add(dateTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 82, 382, -1));
+        add(hospitalTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 382, -1));
+        add(DoctorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 382, -1));
+        add(dateTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 382, -1));
 
         notesTxt.setColumns(20);
         notesTxt.setRows(5);
         jScrollPane1.setViewportView(notesTxt);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 136, 382, 214));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 382, 214));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Hospital: ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 23, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, -1, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Physician: ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 55, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Date: ");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 87, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Notes: ");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 136, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, -1, -1));
 
-        backBtn.setText("< back");
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        backBtn.setText("< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 383, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 110, -1));
 
+        addNotesBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         addNotesBtn.setText("Add Notes");
         addNotesBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addNotesBtnActionPerformed(evt);
             }
         });
-        add(addNotesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(385, 383, -1, -1));
+        add(addNotesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, -1, -1));
 
+        saveBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         saveBtn.setText("Save");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
             }
         });
-        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 383, -1, -1));
+        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 430, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

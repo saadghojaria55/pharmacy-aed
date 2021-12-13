@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Saad Ghojaria
+ * @author shrutikasalian
  */
 public class PatientSideNavWorkAreaJpanel extends javax.swing.JPanel {
 
@@ -59,17 +59,87 @@ public class PatientSideNavWorkAreaJpanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        systemAdminPanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         historyBtn = new javax.swing.JButton();
         appointmentBtn = new javax.swing.JButton();
         reportsBtn = new javax.swing.JButton();
         personalInfoBtn1 = new javax.swing.JButton();
+        reportsBtn1 = new javax.swing.JButton();
         rightSystemAdminPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        systemAdminPanel = new javax.swing.JPanel();
 
         setPreferredSize(new java.awt.Dimension(1800, 900));
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel3.setMinimumSize(new java.awt.Dimension(280, 840));
+        jPanel3.setPreferredSize(new java.awt.Dimension(280, 840));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel3.setText("Patient dashboard ");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 140, 30));
+
+        historyBtn.setBackground(new java.awt.Color(204, 204, 204));
+        historyBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        historyBtn.setText("History");
+        historyBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                historyBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(historyBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
+
+        appointmentBtn.setBackground(new java.awt.Color(204, 204, 204));
+        appointmentBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        appointmentBtn.setText("Appointments");
+        appointmentBtn.setMaximumSize(new java.awt.Dimension(200, 40));
+        appointmentBtn.setMinimumSize(new java.awt.Dimension(200, 40));
+        appointmentBtn.setPreferredSize(new java.awt.Dimension(200, 40));
+        appointmentBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                appointmentBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(appointmentBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+
+        reportsBtn.setBackground(new java.awt.Color(204, 204, 204));
+        reportsBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        reportsBtn.setText("Reports");
+        reportsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportsBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(reportsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 200, 40));
+
+        personalInfoBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        personalInfoBtn1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        personalInfoBtn1.setText("Personal Information");
+        personalInfoBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personalInfoBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(personalInfoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 200, 40));
+
+        reportsBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        reportsBtn1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        reportsBtn1.setText("SOS Request");
+        reportsBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportsBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(reportsBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 200, 40));
+
+        rightSystemAdminPanel.setBackground(new java.awt.Color(255, 255, 255));
+        rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(1058, 840));
+        rightSystemAdminPanel.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/BKG3_1.jpg"))); // NOI18N
+        rightSystemAdminPanel.add(jLabel1, "card2");
 
         systemAdminPanel.setBackground(new java.awt.Color(215, 81, 81));
         systemAdminPanel.setMinimumSize(new java.awt.Dimension(1338, 840));
@@ -85,61 +155,6 @@ public class PatientSideNavWorkAreaJpanel extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel3.setMinimumSize(new java.awt.Dimension(280, 840));
-        jPanel3.setPreferredSize(new java.awt.Dimension(280, 840));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel3.setText("Patient dashboard ");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 140, 30));
-
-        historyBtn.setBackground(new java.awt.Color(204, 204, 204));
-        historyBtn.setText("History");
-        historyBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                historyBtnActionPerformed(evt);
-            }
-        });
-        jPanel3.add(historyBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
-
-        appointmentBtn.setBackground(new java.awt.Color(204, 204, 204));
-        appointmentBtn.setText("Appointments");
-        appointmentBtn.setMaximumSize(new java.awt.Dimension(200, 40));
-        appointmentBtn.setMinimumSize(new java.awt.Dimension(200, 40));
-        appointmentBtn.setPreferredSize(new java.awt.Dimension(200, 40));
-        appointmentBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                appointmentBtnActionPerformed(evt);
-            }
-        });
-        jPanel3.add(appointmentBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
-
-        reportsBtn.setBackground(new java.awt.Color(204, 204, 204));
-        reportsBtn.setText("Reports");
-        reportsBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reportsBtnActionPerformed(evt);
-            }
-        });
-        jPanel3.add(reportsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 200, 40));
-
-        personalInfoBtn1.setBackground(new java.awt.Color(204, 204, 204));
-        personalInfoBtn1.setText("Personal Information");
-        personalInfoBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                personalInfoBtn1ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(personalInfoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 200, 40));
-
-        rightSystemAdminPanel.setBackground(new java.awt.Color(255, 255, 255));
-        rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(1058, 840));
-        rightSystemAdminPanel.setLayout(new java.awt.CardLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/BKG3_1.jpg"))); // NOI18N
-        rightSystemAdminPanel.add(jLabel1, "card2");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -151,10 +166,10 @@ public class PatientSideNavWorkAreaJpanel extends javax.swing.JPanel {
                 .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1303, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(211, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(495, Short.MAX_VALUE)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(systemAdminPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,10 +178,10 @@ public class PatientSideNavWorkAreaJpanel extends javax.swing.JPanel {
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1025, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(249, Short.MAX_VALUE)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(systemAdminPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 776, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -202,6 +217,14 @@ public class PatientSideNavWorkAreaJpanel extends javax.swing.JPanel {
         layout.next(rightSystemAdminPanel); 
     }//GEN-LAST:event_personalInfoBtn1ActionPerformed
 
+    private void reportsBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportsBtn1ActionPerformed
+        // TODO add your handling code here:
+        PatientSOSJPanel patientInfoJPanel = new PatientSOSJPanel(rightSystemAdminPanel, business,account, this.patient);
+        rightSystemAdminPanel.add("PatientInfoJPanel", patientInfoJPanel);
+        CardLayout layout = (CardLayout) rightSystemAdminPanel.getLayout();
+        layout.next(rightSystemAdminPanel); 
+    }//GEN-LAST:event_reportsBtn1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton appointmentBtn;
@@ -211,6 +234,7 @@ public class PatientSideNavWorkAreaJpanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton personalInfoBtn1;
     private javax.swing.JButton reportsBtn;
+    private javax.swing.JButton reportsBtn1;
     private javax.swing.JPanel rightSystemAdminPanel;
     private javax.swing.JPanel systemAdminPanel;
     // End of variables declaration//GEN-END:variables

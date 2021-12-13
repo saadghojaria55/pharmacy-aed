@@ -74,7 +74,7 @@ public class LabInfo1Jpanel extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 40, 40));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 40, 40));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,8 +134,8 @@ public class LabInfo1Jpanel extends javax.swing.JPanel {
         });
         add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 430, 80, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/shrutikasalian/Desktop/lab1.jpeg")); // NOI18N
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, -10, 1090, 700));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/lab1.jpeg"))); // NOI18N
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, -10, 1090, 700));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

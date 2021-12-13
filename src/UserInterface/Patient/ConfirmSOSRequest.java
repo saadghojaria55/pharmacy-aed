@@ -8,10 +8,12 @@ package UserInterface.Patient;
 import Business.Ambulance.Ambulance;
 import Business.Ecosystem;
 import Business.Patient.Patient;
+import Business.SOSRequest.SOSRequests;
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -36,6 +38,56 @@ public class ConfirmSOSRequest extends javax.swing.JPanel {
         this.ambulance=ambulance;
         this.ambuId=bookSOS;
         this.patient=patient;
+        populateTable();
+        
+    }
+    public void populateTable() {
+        
+        ArrayList<Ambulance> sosList = business.getAmbulancefleet().getAmbulanceFleet();
+        int rowCount = sosTable.getRowCount();
+        DefaultTableModel model = (DefaultTableModel)sosTable.getModel();
+        for(int i=rowCount-1;i>=0;i--) {
+            model.removeRow(i);
+        }
+        
+        for(Ambulance sos : sosList) {
+            if(sos.getAmbulanceId().equals(ambuId)){
+                
+            Object row[] = new Object[7];
+            row[0] = sos.getAmbulanceId();
+            row[1] = sos.getDriverName();
+            row[2] = sos.getPhoneNo();
+            row[3] = sos.getBaseLocation();
+            row[4] = sos.getLicenseNo();
+            //row[5] = sos.getReqStatus();
+            model.addRow(row);
+            
+            }
+        }
+    }
+    public void populateTable2() {
+        
+        ArrayList<Ambulance> sosList = business.getAmbulancefleet().getAmbulanceFleet();
+        int rowCount = sosTable.getRowCount();
+        DefaultTableModel model = (DefaultTableModel)sosTable.getModel();
+        for(int i=rowCount-1;i>=0;i--) {
+            model.removeRow(i);
+        }
+        
+        for(Ambulance sos : sosList) {
+            if(sos.getAmbulanceId().equals(ambuId)){
+                
+            Object row[] = new Object[7];
+            row[0] = sos.getAmbulanceId();
+            row[1] = sos.getDriverName();
+            row[2] = sos.getPhoneNo();
+            row[3] = sos.getBaseLocation();
+            row[4] = sos.getLicenseNo();
+            row[5] = sos.getReqStatus();
+            model.addRow(row);
+            
+            }
+        }
     }
 
     /**
@@ -51,12 +103,14 @@ public class ConfirmSOSRequest extends javax.swing.JPanel {
         patientAddr = new javax.swing.JTextField();
         Confirmbtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        sosTable = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Location:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 198, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, -1, -1));
 
         patientAddr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +131,21 @@ public class ConfirmSOSRequest extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CONFIRM SOS REQUEST");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 82, 309, -1));
+
+        sosTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Ambulance Id", "Driver Name", "Contact Number", "Base Location", "License Number", "Status"
+            }
+        ));
+        jScrollPane1.setViewportView(sosTable);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 840, 280));
     }// </editor-fold>//GEN-END:initComponents
 
     private void patientAddrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientAddrActionPerformed
@@ -93,15 +162,25 @@ public class ConfirmSOSRequest extends javax.swing.JPanel {
                String address=patientAddr.getText();
                ambu.addSOSReq(ambu.getAmbulanceId(),ambu.getBaseLocation(), ambu.getPhoneNo(),patient.getName(),address , patient.getPhoneNo());
                JOptionPane.showMessageDialog(null, "AMBULANCE REQUEST SENT");
+               ambu.setReqStatus("SENT");
+               
         
-        }     
+        } 
+            populateTable2();
+       
+        
     }//GEN-LAST:event_ConfirmbtnActionPerformed
-   }
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Confirmbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField patientAddr;
+    private javax.swing.JTable sosTable;
     // End of variables declaration//GEN-END:variables
+
+    
+    
 }

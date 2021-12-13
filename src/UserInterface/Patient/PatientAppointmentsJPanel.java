@@ -53,17 +53,18 @@ public class PatientAppointmentsJPanel extends javax.swing.JPanel {
         rightJPanel.setLayout(rightJPanelLayout);
         rightJPanelLayout.setHorizontalGroup(
             rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 465, Short.MAX_VALUE)
+            .addGap(0, 570, Short.MAX_VALUE)
         );
         rightJPanelLayout.setVerticalGroup(
             rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 462, Short.MAX_VALUE)
+            .addGap(0, 516, Short.MAX_VALUE)
         );
 
         jSplitPane1.setRightComponent(rightJPanel);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(138, 194, 211));
 
+        UpcomingAppointmentBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         UpcomingAppointmentBtn.setText("Upcoming Appointments");
         UpcomingAppointmentBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +72,7 @@ public class PatientAppointmentsJPanel extends javax.swing.JPanel {
             }
         });
 
+        ScheduleAppointmentBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         ScheduleAppointmentBtn.setText("Schedule an Appointment");
         ScheduleAppointmentBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +80,8 @@ public class PatientAppointmentsJPanel extends javax.swing.JPanel {
             }
         });
 
-        backBtn.setText("<back");
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        backBtn.setText("< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
@@ -92,21 +95,25 @@ public class PatientAppointmentsJPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UpcomingAppointmentBtn)
-                    .addComponent(ScheduleAppointmentBtn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(ScheduleAppointmentBtn))
+                    .addComponent(UpcomingAppointmentBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(backBtn)
-                .addGap(69, 69, 69)
-                .addComponent(UpcomingAppointmentBtn)
+                .addGap(114, 114, 114)
+                .addComponent(UpcomingAppointmentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(ScheduleAppointmentBtn)
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addComponent(ScheduleAppointmentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(247, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);

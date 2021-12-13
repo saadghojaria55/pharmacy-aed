@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Jatin Bali
+ * @author Saad Ghojaria
  */
 public class SearchPatientJPanel extends javax.swing.JPanel {
 
@@ -114,42 +114,46 @@ public class SearchPatientJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setRightComponent(rightJPanel);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(138, 194, 211));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.add(patientComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 81, 135, -1));
 
+        patientDetails.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         patientDetails.setText("Patient Details");
         patientDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 patientDetailsActionPerformed(evt);
             }
         });
-        jPanel1.add(patientDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 135, 167, -1));
+        jPanel1.add(patientDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 125, 180, 50));
 
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton2.setText("Patient Medications");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 182, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, 50));
 
+        testResult.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         testResult.setText("Patient Test Results");
         testResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 testResultActionPerformed(evt);
             }
         });
-        jPanel1.add(testResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 229, -1, -1));
+        jPanel1.add(testResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, 50));
 
-        backBtn.setText("< back");
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        backBtn.setText("< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 14, -1, -1));
+        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 14, 110, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/images/company logo.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 364, -1, -1));

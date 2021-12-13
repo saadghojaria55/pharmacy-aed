@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author Saad Ghojaria
  */
 public class LabInfoJpanel extends javax.swing.JPanel {
 
@@ -75,74 +75,84 @@ public class LabInfoJpanel extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backBtn.setText("<back");
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        backBtn.setText("< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 111, 50));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 111, 30));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel1.setText("Lab Information");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 113, -1, -1));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("LAB INFORMATION");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Lab Id:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 179, -1, -1));
-        add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 174, 221, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
+        add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 221, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Lab Name:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 211, -1, -1));
-        add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 206, 221, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, -1, -1));
+        add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 221, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Contact number:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 244, -1, -1));
-        add(numberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 239, 221, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, -1));
+        add(numberTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 221, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Email id:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 282, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
 
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailTxtActionPerformed(evt);
             }
         });
-        add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 277, 221, -1));
+        add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 221, -1));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Address:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 320, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, -1));
 
         addressTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressTxtActionPerformed(evt);
             }
         });
-        add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 315, 221, -1));
+        add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 221, -1));
 
+        UpdateBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         UpdateBtn.setText("Update");
         UpdateBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UpdateBtnActionPerformed(evt);
             }
         });
-        add(UpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 431, -1, -1));
+        add(UpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 100, -1));
 
+        saveBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         saveBtn.setText("Save");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
             }
         });
-        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(419, 431, -1, -1));
+        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 430, 100, -1));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Type:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 363, 55, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 40, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pathology Lab", "Neurology Lab", "Orthopedic Lab" }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 359, 221, -1));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 221, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

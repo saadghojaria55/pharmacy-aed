@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shrutikasalian
+ * @author srushtidesai
  */
 public class CreateAmbulanceJPanel extends javax.swing.JPanel {
 
@@ -66,17 +66,18 @@ public class CreateAmbulanceJPanel extends javax.swing.JPanel {
         passwordTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         licenseTxt = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(138, 194, 211));
+        setBackground(new java.awt.Color(13, 37, 70));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backBtn.setText("<back");
+        backBtn.setText("<");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 576, 101, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(291, 130, 50, -1));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,13 +105,14 @@ public class CreateAmbulanceJPanel extends javax.swing.JPanel {
         });
         add(baseLocationTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 221, -1));
 
+        saveBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         saveBtn.setText("Save");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
             }
         });
-        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, -1, -1));
+        add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 480, 110, -1));
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("UserName:");
@@ -132,6 +134,9 @@ public class CreateAmbulanceJPanel extends javax.swing.JPanel {
             }
         });
         add(licenseTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 221, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/ambu.jpeg"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 66, 850, 470));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -215,6 +220,7 @@ public class CreateAmbulanceJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField drivernameTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

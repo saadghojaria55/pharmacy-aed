@@ -42,7 +42,7 @@ public class PatientScheduleAppointmentJPanel extends javax.swing.JPanel {
         this.CardLayoutJPanel = CardLayoutJPanel;
         this.account=account;
         this.business = business;
-        //populateHopitalComboBox();
+        populateHopitalComboBox();
     }
     
     public void populateHopitalComboBox() {
@@ -85,7 +85,7 @@ public class PatientScheduleAppointmentJPanel extends javax.swing.JPanel {
         booknowbtn = new javax.swing.JButton();
         dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         physicianNameCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -93,38 +93,42 @@ public class PatientScheduleAppointmentJPanel extends javax.swing.JPanel {
                 physicianNameComboActionPerformed(evt);
             }
         });
-        add(physicianNameCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 200, -1));
+        add(physicianNameCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 200, -1));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Hospital: ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 124, 27));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 124, 27));
 
+        searchByHospitalName.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         searchByHospitalName.setText("Get available time slots");
         searchByHospitalName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchByHospitalNameActionPerformed(evt);
             }
         });
-        add(searchByHospitalName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 190, -1));
+        add(searchByHospitalName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 190, -1));
 
-        jLabel2.setText("Physician");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 124, 27));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Physician:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 124, 27));
 
         hospitalNameComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hospitalNameComboBoxActionPerformed(evt);
             }
         });
-        add(hospitalNameComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 200, -1));
+        add(hospitalNameComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 200, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Department: ");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 124, 27));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 124, 27));
 
         departmentlNameCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 departmentlNameComboActionPerformed(evt);
             }
         });
-        add(departmentlNameCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 200, -1));
+        add(departmentlNameCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 200, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -139,19 +143,21 @@ public class PatientScheduleAppointmentJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 810, 210));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 810, 210));
 
-        jLabel4.setText("Date");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 124, 27));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Date:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 124, 27));
 
+        booknowbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         booknowbtn.setText("Book Now");
         booknowbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 booknowbtnActionPerformed(evt);
             }
         });
-        add(booknowbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 600, -1, -1));
-        add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 190, -1));
+        add(booknowbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, 190, 40));
+        add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 180, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void physicianNameComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_physicianNameComboActionPerformed
@@ -198,7 +204,7 @@ public class PatientScheduleAppointmentJPanel extends javax.swing.JPanel {
         ArrayList<Department> deptList = selectedHospital.getDepartmentDirectory();
         Department[] comboBoxModel = deptList.toArray(new Department[0]);
     //   System.out.print(deptList.toArray());
-    hospitalNameComboBox.setSelectedIndex(-1);
+        //hospitalNameComboBox.setSelectedIndex(-1);
         departmentlNameCombo.setModel(new DefaultComboBoxModel<Department>(comboBoxModel));
      
     }//GEN-LAST:event_hospitalNameComboBoxActionPerformed

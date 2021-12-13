@@ -6,7 +6,7 @@ package UserInterface.SystemAdmin;
 
 /**
  *
- * @author saad
+ * @author Saad Ghojaria
  */
 public class CreateAdminJPanel extends javax.swing.JPanel {
 
@@ -39,17 +39,21 @@ public class CreateAdminJPanel extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel5.setText("Add Admin");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 110, 40));
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("ADD ADMIN");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 250, 40));
         add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 220, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Admin Username");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, -1, 20));
 
-        jLabel4.setText("HospitalName");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Hospital Name");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, -1, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Admin Name");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 90, -1));
         add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 220, -1));
@@ -61,14 +65,16 @@ public class CreateAdminJPanel extends javax.swing.JPanel {
         });
         add(hospname, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 220, -1));
 
+        submitbtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         submitbtn.setText("Submit");
         submitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitbtnActionPerformed(evt);
             }
         });
-        add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, -1, -1));
+        add(submitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 170, -1));
 
+        jLabel1.setBackground(new java.awt.Color(138, 194, 211));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Picture/BKG1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 520));

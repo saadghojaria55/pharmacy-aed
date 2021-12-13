@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Jatin Bali
+ * @author srushtidesai
  */
 public class PhysicianUpcomingAppointmentsJPanel extends javax.swing.JPanel {
     
@@ -74,7 +74,7 @@ public class PhysicianUpcomingAppointmentsJPanel extends javax.swing.JPanel {
             row[1] = d.getDepartment().getHospital().getName();
             row[2] = pr;
             row[3] = pr.getTime();
-            row[4] = pr.getAppointmentDate();
+            //row[4] = pr.getAppointmentDate();
             
             model.addRow(row);
             
@@ -99,51 +99,55 @@ public class PhysicianUpcomingAppointmentsJPanel extends javax.swing.JPanel {
         completeBtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
-        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel4.setBackground(new java.awt.Color(138, 194, 211));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel4.setText("Upcoming Appointments");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 78, -1, 58));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("UPCOMING APPOINTMENTS");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, 58));
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Patient", "Hospital", "Date Requested", "Time Slot", "Appointment Date"
+                "Patient", "Hospital", "Date Requested", "Time Slot"
             }
         ));
         jScrollPane4.setViewportView(jTable4);
 
-        jPanel4.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 154, 802, 183));
+        jPanel4.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 730, 183));
 
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton5.setText("Cancel Appointment");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 355, -1, -1));
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 210, 40));
 
+        completeBtn.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         completeBtn.setText("Complete Appointment");
         completeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 completeBtnActionPerformed(evt);
             }
         });
-        jPanel4.add(completeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(522, 355, 183, -1));
+        jPanel4.add(completeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 409, 210, 40));
 
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton1.setText("Refresh");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 355, -1, -1));
+        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 359, 210, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

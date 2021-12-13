@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author srushtidesai
+ * @author shrutikasalian
  */
 public class AddItemJPanel extends javax.swing.JPanel {
 
@@ -79,6 +79,7 @@ public class AddItemJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSave.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

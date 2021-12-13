@@ -11,12 +11,13 @@ import Business.UserAccount.UserAccount;
 import UserInterface.LabManuRequest.orderItemsManu;
 import java.awt.CardLayout;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author srushtidesai
+ * @author shrutikasalian
  */
 public class LabOrderAreaJPanel extends javax.swing.JPanel {
 
@@ -32,7 +33,7 @@ public class LabOrderAreaJPanel extends javax.swing.JPanel {
         this.CardLayoutJPanel=CardLayoutJPanel;
         this.account=account;
         this.business= business;
-        populatetable();
+        populateOrderDetails();
     }
 
     /**
@@ -44,67 +45,89 @@ public class LabOrderAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        manuTable = new javax.swing.JTable();
         requestTestJButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         refreshTestJButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblOrderList = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        manuTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Lab Name", "Status", "Order Time", "Manufacturer Name", "Delivery Time"
-            }
-        ));
-        jScrollPane1.setViewportView(manuTable);
-
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 87, 742, 242));
-
+        requestTestJButton.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         requestTestJButton.setText("Place New Order");
         requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 requestTestJButtonActionPerformed(evt);
             }
         });
-        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 347, -1, -1));
+        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 400, 190, 40));
 
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton1.setText("Order Details");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 347, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(307, 460, 190, 40));
 
+        refreshTestJButton.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         refreshTestJButton.setText("Refresh");
-        add(refreshTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 24, -1, -1));
+        add(refreshTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 349, 190, 40));
+
+        tblOrderList.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Manufacturer ID", "Manufacturer Name", "Contact", "Email Address"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tblOrderList);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 560, 210));
     }// </editor-fold>//GEN-END:initComponents
 
     private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
         // TODO add your handling code here:
-        orderItemsManu otm = new orderItemsManu(CardLayoutJPanel, account, business,manuId);
-        CardLayoutJPanel.add("LabOrderAreaJPanel", otm);
-        CardLayout layout = (CardLayout)CardLayoutJPanel.getLayout();
-        layout.next(CardLayoutJPanel); 
+        int row = tblOrderList.getSelectedRow();
+        if(row<0) {
+            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        else{
+          
+           String manuId;
+           manuId= (String) tblOrderList.getValueAt(row, 0);
+                
+                 orderItemsManu oim =new orderItemsManu (CardLayoutJPanel,account,business,manuId);
+                 CardLayoutJPanel.add("UpdateStatusPanel",oim);
+                 CardLayout layout=(CardLayout)CardLayoutJPanel.getLayout();
+                 layout.next(CardLayoutJPanel);
+        }
     }//GEN-LAST:event_requestTestJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable manuTable;
     private javax.swing.JButton refreshTestJButton;
     private javax.swing.JButton requestTestJButton;
+    private javax.swing.JTable tblOrderList;
     // End of variables declaration//GEN-END:variables
 
-    private void populatetable() {
+    private void populateOrderDetails() {
         ArrayList<Manufacturer> manuList = business.getManufacturerDirectory().getManufacturerList();
-        
-        int rowCount = manuTable.getRowCount();
-        manuId=(String) manuTable.getValueAt(rowCount,0);
-        DefaultTableModel model = (DefaultTableModel)manuTable.getModel();
+    
+        int rowCount = tblOrderList.getRowCount();
+        DefaultTableModel model = (DefaultTableModel)tblOrderList.getModel();
         for(int i=rowCount-1;i>=0;i--) {
             model.removeRow(i);
         }
@@ -115,7 +138,11 @@ public class LabOrderAreaJPanel extends javax.swing.JPanel {
             row[1] = m.getManuName();
             row[2] = m.getPhoneNumber();
             row[3] = m.getEmailAddress();
+           
+           
+           
+            
             model.addRow(row);
         }
     }
-}
+ }

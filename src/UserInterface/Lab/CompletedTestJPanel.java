@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rakesh Lokam
+ * @author Saad Ghojaria
  */
 public class CompletedTestJPanel extends javax.swing.JPanel {
 
@@ -50,12 +50,13 @@ public class CompletedTestJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel1.setText("Completed Tests");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(179, 42, -1, -1));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("COMPLETED TESTS");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -70,7 +71,7 @@ public class CompletedTestJPanel extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 97, 602, 141));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 602, 141));
     }// </editor-fold>//GEN-END:initComponents
 public void populateTable() {
         // populate all patients in patient directory

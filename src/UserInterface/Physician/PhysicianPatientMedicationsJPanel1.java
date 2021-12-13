@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Jatin Bali
+ * @author Saad Ghojaria
  */
 public class PhysicianPatientMedicationsJPanel1 extends javax.swing.JPanel {
     
@@ -110,12 +110,13 @@ public class PhysicianPatientMedicationsJPanel1 extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(138, 194, 211));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
-        jLabel4.setText("Patient Medications");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 52, -1, 58));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("PATIENT MEDICATIONS");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, 58));
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -130,7 +131,7 @@ public class PhysicianPatientMedicationsJPanel1 extends javax.swing.JPanel {
         ));
         jScrollPane4.setViewportView(jTable4);
 
-        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 144, 630, 120));
+        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 630, 120));
     }// </editor-fold>//GEN-END:initComponents
 
 
